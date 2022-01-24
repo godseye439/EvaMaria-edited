@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = ""Hᴇʟʟᴏ 🙋 {} I'ᴍ ʟɪᴇɴᴀ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡᴏʀᴋɪɴɢ ɪɴ @nflix_movies 💜
+    START_TXT = """Hᴇʟʟᴏ 🙋 {} I'ᴍ ʟɪᴇɴᴀ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡᴏʀᴋɪɴɢ ɪɴ @nflix_movies 💜
 Yᴏᴜ ᴄᴀɴ'ᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ Gʀᴏᴜᴘs ɪ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ @nflix_movies 💜"""
     HELP_TXT = """𝑯𝒆𝒓𝒆 𝒊𝒔 𝒕𝒉𝒆  𝐇𝐞𝐥𝐩  𝒇𝒐𝒓 𝒎𝒚 𝒄𝒐𝒎𝒎𝒂𝒏𝒅."""
     ABOUT_TXT = """✯ 𝑴𝒚 𝑵𝒂𝒎𝒆: {}
