@@ -23,7 +23,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🌸 𝐅𝐢𝐧𝐝𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐒𝐨𝐧𝐠 🎸••••')
+    m = message.reply('Findinf your song')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -54,11 +54,11 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐫𝐞𝐬𝐮𝐥𝐭 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐫𝐞𝐪𝐮𝐞𝐬𝐭💔. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐭𝐫𝐲 𝐚𝐧𝐨𝐭𝐡𝐞𝐫 𝐬𝐨𝐧𝐠 𝐨𝐫 𝐮𝐬𝐞 𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐬𝐩𝐞𝐥𝐥𝐢𝐧𝐠💞!**')
+            m.edit('**Cant find anything related to your search**')
             return
     except Exception as e:
         m.edit(
-            "**𝐄𝐧𝐭𝐞𝐫 𝐒𝐨𝐧𝐠 𝐍𝐚𝐦𝐞 𝐰𝐢𝐭𝐡 𝐂𝐨𝐦𝐦𝐚𝐧𝐝💞**❗\nFor 𝐄𝐱𝐚𝐦𝐩𝐥𝐞: /s Alone Marshmellow"
+            "**Enter song name with command**"
         )
         print(str(e))
         return
@@ -66,13 +66,13 @@ def a(client, message):
     m.edit("⏫•🎵••")
     m.edit("🔽••🎵•")
     m.edit("⏬•••🎵")
-    m.edit("ℙ𝕝𝕖𝕒𝕤𝕖 𝕨𝕒𝕚𝕥 𝕚𝕥 𝕞𝕒𝕪 𝕥𝕒𝕜𝕖 𝕤𝕠𝕞𝕖 𝕥𝕚𝕞𝕖.")
+    m.edit("Pls wait")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'{msg.from_user.mention}\n🎹 <b> 𝑻𝒊𝒕𝒍𝒆:</b> <a href="{link}">{title}</a>\n🎙️ <b>𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏:</b> <code>{duration}</code>\n🎵 <b>𝑽𝒊𝒆𝒘𝒔:</b> <code>{views}</code>\n🔼𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒃𝒚: <a href=https://t.me/meenu_filter_bot> 𝑵𝒂𝒕𝒂𝒍𝒊𝒂 𝑫𝒚𝒆𝒓 🌸 </a>  '
+        rep = f'{msg.from_user.mention}\n🎹 <b> 𝑻𝒊𝒕𝒍𝒆:</b> <a href="{link}">{title}</a>\n🎙️ <b>𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏:</b> <code>{duration}</code>\n🎵 <b>𝑽𝒊𝒆𝒘𝒔:</b> <code>{views}</code>\n🔼𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒃𝒚: <a href=https://t.me/nflix_movies</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
